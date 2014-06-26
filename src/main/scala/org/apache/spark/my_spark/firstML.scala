@@ -4,7 +4,7 @@ import org.apache.spark.mllib.regression.LabeledPoint
 
 object firstML {
   def main(args: Array[String]) {
-    val sc = new SparkContext("local", "Simple App")
+   /* val sc = new SparkContext("local", "Simple App")
     val data = sc.textFile("/home/junius/spark-0.9.1/mllib/data/sample_svm_data.txt")
     val parsedData = data.map { line =>
       val parts = line.split(' ')
@@ -19,7 +19,7 @@ object firstML {
     }
     
     val err = labelAndPreds.filter( r => r._1 != r._2).count.toDouble / parsedData.count
-    println("Error = ", err)
+    println("Error = ", err)*/
     
   }
 }
