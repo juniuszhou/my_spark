@@ -13,22 +13,19 @@ object closure {
                                                   //| res0: Any = ()
   f()                                             //> (I ma closure ,3)
                                                   //| res1: Any = ()
-  val ran = new Random(10)                        //> ran  : java.util.Random = java.util.Random@198c113
-  (0 to 10) map { t =>
+  val ran = new Random(10)                        //> ran  : java.util.Random = java.util.Random@62787c64
+  (0 to 1) map { t =>
   	println(ran.nextInt(100))                 //> 13
                                                   //| 80
-                                                  //| 93
-                                                  //| 90
-                                                  //| 46
-                                                  //| 56
-                                                  //| 97
-                                                  //| 88
-                                                  //| 81
-                                                  //| 14
-                                                  //| 23
-                                                  //| res2: scala.collection.immutable.IndexedSeq[Unit] = Vector((), (), (), (), (
+                                                  //| res2: scala.collection.immutable.IndexedSeq[Unit] = Vector((), ())
+  }
+  
+  var sum = 0.0                                   //> sum  : Double = 0.0
+  (0 to 10) map {
+  	sum += _                                  //> res3: scala.collection.immutable.IndexedSeq[Unit] = Vector((), (), (), (), (
                                                   //| ), (), (), (), (), (), ())
   }
+  println(sum)                                    //> 55.0
   
   println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
 }

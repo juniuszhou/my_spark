@@ -41,6 +41,13 @@ object functionss{
                                                   //| 3
   List(1,2,3,4).foreach(print _ )                 //> 1234
 	
+	//partial function, just given part of parameters or even no parameter.
+	def mySum(a: Int, b: Int, c: Int): Int = {
+	a + b + c
+	}                                         //> mySum: (a: Int, b: Int, c: Int)Int
+	val partialSum1 = mySum _                 //> partialSum1  : (Int, Int, Int) => Int = <function3>
+	val partialSum2 = mySum(2, _: Int, 4)     //> partialSum2  : Int => Int = <function1>
+	
 	//currying  Currying is the technique of transforming a function that takes multiple arguments
   //in such a way that it can be called as a chain of functions each with a single argument.
 	def filter(xs: List[Int], p: Int => Boolean): List[Int] =

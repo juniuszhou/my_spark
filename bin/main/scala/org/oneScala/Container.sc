@@ -2,6 +2,11 @@ package oneScala
 import scala.collection.mutable.Set
 import scala.collection.mutable.Map
 import scala.collection.mutable._
+
+//import scala.collection.immutable.Set
+//import scala.collection.immutable.Map
+
+
 object Container {
 	//def array
 	val as : Array[String] = new Array[String](3)
@@ -13,7 +18,8 @@ object Container {
 	as.foreach(println)                       //> pass 
                                                   //| World 
                                                   //| !
-	//list
+	//list, implemented as uni direction tree.
+	// each item in array and list has the same type.
 	val ls = List(1,2)                        //> ls  : List[Int] = List(1, 2)
 	val lsNo = Nil                            //> lsNo  : scala.collection.immutable.Nil.type = List()
 	val hItem = ls.head                       //> hItem  : Int = 1
